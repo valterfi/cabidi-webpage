@@ -10213,6 +10213,11 @@ body {
   background-attachment: scroll;
   background-size: cover;
 }
+
+.masthead img {
+  width: 90%;
+}
+
 .masthead h1 {
   font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 2.5rem;
@@ -10232,6 +10237,10 @@ body {
     font-size: 4rem;
     line-height: 4rem;
   }
+
+  .masthead img {
+    width: 70%;
+  }
 }
 @media (min-width: 992px) {
   .masthead {
@@ -10246,6 +10255,10 @@ body {
   .masthead h2 {
     max-width: 30rem;
     font-size: 1.25rem;
+  }
+
+  .masthead img {
+    width: 60%;
   }
 }
 
