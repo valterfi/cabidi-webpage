@@ -30,6 +30,33 @@
         }
     });
 
+    $('#send-email-id').submit(function(e) {
+
+        e.preventDefault();
+
+        let recipient = $('#recipient-id').val();
+        console.log(recipient);
+
+        let data = $('#content-id').val();
+        console.log(data);
+        
+        $.ajax({
+            url: 'http://localhost:8080/send/' + recipient,
+            type: 'POST',
+            data: data,
+            contentType: 'application/json',
+            cache: false
+        }).done(function() {
+            alert( "success" );
+            $('#recipient-id').val('');
+            $('#content-id').val('');
+          })
+          .fail(function() {
+            alert( "error" );
+          })
+
+    });
+
     // Closes responsive menu when a scroll trigger link is clicked
     $(".js-scroll-trigger").click(function () {
         $(".navbar-collapse").collapse("hide");
